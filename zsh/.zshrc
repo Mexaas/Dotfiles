@@ -20,10 +20,10 @@ export GOPATH="$HOME/.local/share/go" >> ~/.zshrc
 export PATH="$GOPATH/bin:$PATH" >> ~/.zshrc
 
 # RUST
-export CARGO_HOME="$HOME/.local/share/cargo"
+export CARGOPATH="$HOME/.local/share/cargo"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 
 # SYSTEM
-export M2_HOME="$HOME/.local/share/m2"
-export NV_CONFIG_FILE="$HOME/.config/nvidia/nvidia-settings-rc"
-export GNUPGHOME="$HOME/.local/share/gnupg"
+export M2PATH="$HOME/.local/share/m2"
+export NVPATH="$HOME/.config/nvidia/nvidia-settings-rc"
+export GNUPGPATH="$HOME/.local/share/gnupg"
