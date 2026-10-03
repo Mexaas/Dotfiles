@@ -1,0 +1,82 @@
+token: y0__wgBEJ-l7ckHGN74BiDD1cOiGfvoNtwKb2ZhvbaO6nqurHKur3-U
+buffer-size-ms: 80
+rewind-duration-s: 5
+volume: 0.5000000000000001
+volume-step: 0.05
+suppress-errors: false
+show-lyrics: false
+cache-tracks: likes
+cache-dir: ""
+proxy: ""
+ssl-certs: []
+search:
+    artists: true
+    popular: false
+    albums: false
+    playlists: false
+controls:
+    quit: ctrl+q,ctrl+c
+    apply: enter
+    cancel: esc
+    cursor-up: k
+    cursor-down: j
+    reload: ctrl+\
+    show-all-kyes: '?'
+    playlists-up: ctrl+k
+    playlists-down: ctrl+j
+    playlists-rename: ctrl+r
+    playlists-hide: ctrl+b
+    tracks-next-page: pgup
+    tracks-previous-page: pgdown
+    tracks-like: l
+    tracks-artist: ctrl+tab
+    tracks-add-to-playlist: a
+    tracks-remove-from-playlist: ctrl+a
+    tracks-share: ctrl+s
+    tracks-shuffle: ctrl+x
+    tracks-search: ctrl+f
+    tracks-back: backspace
+    tracks-hide: ctrl+t
+    player-pause: ' '
+    player-next: right
+    player-previous: left
+    player-rewind-forward: ctrl+right
+    player-rewind-backward: ctrl+left
+    player-like: L
+    player-cache: S
+    player-vol-up: +,=
+    player-vol-down: '-'
+    player-toggle-lyrics: t
+    player-hide: ctrl+p
+style:
+    volume-indicator-width: 16
+    volume-indicator-autohide-at: 58
+    side-panel-width: 32
+    side-panel-autohide-at: 96
+    search-modal-width: 56
+    icons:
+        play: ▶
+        stop: ■
+        liked: "\U0001F49B"
+        not-liked: "\U0001F90D"
+        cached: "\U0001F4BF"
+        lyrics-dot: •
+        volume-off: "\U0001F507"
+        volume-low: "\U0001F508"
+        volume-mid: "\U0001F509"
+        volume-high: "\U0001F50A"
+    colors:
+        accent: '#FC0'
+        error: '#F33'
+        border: '#444'
+        background: '#6b6b6b'
+        playlist-selection: '#4a3c00'
+        active-text: '#EEE'
+        normal-text: '#CCC'
+        inactive-text: '#888'
+        track-title-text: '#dcdcdc'
+        track-version-text: '#999'
+        track-artist-text: '#bbb'
+        lyrics-previous: '#444'
+        lyrics-current: '#EEE'
+        lyrics-next: '#777'
