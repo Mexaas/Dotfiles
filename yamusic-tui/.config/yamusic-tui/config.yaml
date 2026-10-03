@@ -1,7 +1,7 @@
 token: y0__wgBEJ-l7ckHGN74BiDD1cOiGfvoNtwKb2ZhvbaO6nqurHKur3-U
 buffer-size-ms: 80
 rewind-duration-s: 5
-volume: 0.5000000000000001
+volume: 0.54
 volume-step: 0.05
 suppress-errors: false
 show-lyrics: false
@@ -38,13 +38,13 @@ controls:
     tracks-back: backspace
     tracks-hide: ctrl+t
     player-pause: ' '
-    player-next: right
-    player-previous: left
+    player-next: ctrl+l
+    player-previous: ctrl+h
     player-rewind-forward: ctrl+right
     player-rewind-backward: ctrl+left
     player-like: L
     player-cache: S
-    player-vol-up: +,=
+    player-vol-up: =
     player-vol-down: '-'
     player-toggle-lyrics: t
     player-hide: ctrl+p
