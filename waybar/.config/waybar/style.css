@@ -1,0 +1,48 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(20, 20, 20, 0.9);
+    color: #e1e1e1;
+} 
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: #888888;
+}
+
+#workspaces button.active {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 4px;
+}
+
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#tray {
+    padding: 0 10px;
+    margin: 3px 2px;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border-radius: 6px;
+}
+tooltip {
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: #e1e1e1;
+    padding: 6px;
+}

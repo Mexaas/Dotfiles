@@ -1,0 +1,38 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory"
+    ],
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "cpu": {
+        "format": "󰍛  {usage}%",
+        "interval": 2
+    },
+    "memory": {
+        "format": "󰘚  {percentage}%",
+        "interval": 2
+    },
+    "network": {
+        "format-wifi": "󰤥 {signalStrength}%",
+        "format-ethernet": "󰤨 ",
+        "format-disconnected": "󰤭 "
+    },
+    "pulseaudio": {
+        "format": "󰕾  {volume}%",
+        "format-muted": "󰝟 ",
+        "on-click": "pavucontrol"
+    }
+}
