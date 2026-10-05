@@ -35,7 +35,6 @@ layout {
     center-focused-column "never"
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
-        // 1/3 = 0.33333 , 1/2 = 0.5 , 2/3 = 0.66667
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
@@ -126,6 +125,8 @@ layout {
 }
 spawn-at-startup "waybar"
 spawn-sh-at-startup "nvibrant 0 0 0 0 612"
+spawn-at-startup "awww-daemon"
+spawn-sh-at-startup "awww img ~/.config/wallhaven.png"
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -190,6 +191,8 @@ binds {
     // `niri msg action do-something`.
     Mod+Shift+Slash { show-hotkey-overlay; }
     Ctrl+Grave { spawn "kitty"; }
+    Ctrl+4 { spawn-sh "kitty yamusic-tui"; }
+    Ctrl+3 { spawn-sh "kitty concord"; }
     Ctrl+2 { spawn "Telegram"; }
     Ctrl+1 { spawn "firefox"; }
     // and spawn-sh commands
