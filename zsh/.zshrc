@@ -1,15 +1,20 @@
+[ if -z "$DISPLAY" ]; then
+  exec niri
+fi
+
 fastfetch
 
 # Simple aliases
 alias zshe="nvim ~/.zshrc"
-alias alae="nvim ~/.config/alacritty/alacritty.toml"
+alias kittye="nvim ~/.config/kitty/kitty.conf"
+alias nirie="nvim ~/.config/niri/config.kdl"
 alias r="reboot"
 alias pf="systemctl poweroff"
 alias mexvim="NVIM_APPNAME=mexvim nvim"
 
 # Advanced aliases
-jr() {
-  java -cp "target/classes" "com.mexaa.$1"
+rj() {
+  "./target/debug/$1"
 }
 
 # Path & prompt
@@ -20,10 +25,5 @@ export GOPATH="$HOME/.local/share/go" >> ~/.zshrc
 export PATH="$GOPATH/bin:$PATH" >> ~/.zshrc
 
 # RUST
-export CARGOPATH="$HOME/.local/share/cargo"
-export PATH="$HOME/.local/share/cargo/bin:$PATH"
-
-# SYSTEM
-export M2PATH="$HOME/.local/share/m2"
-export NVPATH="$HOME/.config/nvidia/nvidia-settings-rc"
-export GNUPGPATH="$HOME/.local/share/gnupg"
+export CARGO_HOME="$HOME/.local/share/cargo"
+export PATH="$CARGO_HOME/bin:$PATH"
