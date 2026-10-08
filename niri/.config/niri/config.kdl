@@ -83,8 +83,8 @@ binds {
     Ctrl+2 { spawn "Telegram"; } // Open telegram
     Ctrl+1 { spawn "firefox"; } // Open firefox browser
     Ctrl+Alt+Space    allow-when-locked=true { spawn-sh "playerctl play-pause"; } // Music Play-Pause
-    Ctrl+Alt+L        allow-when-locked=true { spawn-sh "playerctl previous"; } // Previous track
-    Ctrl+Alt+H        allow-when-locked=true { spawn-sh "playerctl next"; } // Next track
+    Ctrl+Alt+H        allow-when-locked=true { spawn-sh "playerctl previous"; } // Previous track
+    Ctrl+Alt+L        allow-when-locked=true { spawn-sh "playerctl next"; } // Next track
     Mod+W repeat=false { toggle-overview; } // Zoom 
     Shift+C repeat=false { close-window; } // Close window
     Mod+H     { focus-column-left; } // Window switch left
