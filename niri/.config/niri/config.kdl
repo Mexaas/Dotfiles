@@ -9,6 +9,7 @@ input {
     }
     touchpad {
         // off
+        tap
     }   
     mouse {
         // off
@@ -16,9 +17,9 @@ input {
         accel-profile "flat"
     }
 }
-/-output "eDP-1" {
+output "eDP-1" {
     // off
-    mode "1920x1080@120.030"
+    mode "1920x1080@144.030"
     scale 2
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
@@ -35,10 +36,9 @@ layout {
     center-focused-column "never"
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
-        proportion 0.33333
         proportion 0.5
         proportion 0.66667
-        fixed 1920
+        proportion 1.0
     }
     // You can also customize the heights that "switch-preset-window-height" (Mod+Ctrl+Shift+R) toggles between.
     // preset-window-heights { }
@@ -82,7 +82,7 @@ layout {
     // You can also add a border. It's similar to the focus ring, but always visible.
     border {
         //off
-        width 2
+        width 3
         active-color "grey"
         //inactive-color "grey"
         // Color of the border around windows that request your attention.
@@ -138,7 +138,7 @@ hotkey-overlay {
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
 prefer-no-csd
-screenshot-path "~/downloads/screen %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/images/screen %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
 // Animation settings.
@@ -185,42 +185,25 @@ window-rule {
 }
 
 binds {
-    // "Mod" is a special modifier equal to Super when running on a TTY, and to Alt
-    // when running as a winit window.
-    // Most actions that you can bind here can also be invoked programmatically with
-    // `niri msg action do-something`.
     Mod+Shift+Slash { show-hotkey-overlay; }
     Ctrl+Grave { spawn "kitty"; }
     Ctrl+4 { spawn-sh "kitty yamusic-tui"; }
     Ctrl+3 { spawn-sh "kitty concord"; }
     Ctrl+2 { spawn "Telegram"; }
     Ctrl+1 { spawn "firefox"; }
-    // and spawn-sh commands
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    // XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    // XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    // Example volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
-    // Using spawn-sh allows to pass multiple arguments together with the command.
-    // "-l 1.0" limits the volume to 100%.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    // XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
+    Ctrl+Alt+Space        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    Ctrl+Alt+L        allow-when-locked=true { spawn-sh "playerctl previous"; }
+    Ctrl+Alt+H        allow-when-locked=true { spawn-sh "playerctl next"; }
 
-    // Example media keys mapping using playerctl.
-    // This will work with any MPRIS-enabled media player.
-    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+    // brightnessctl for notebooks
+    // XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    // XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-    // Example brightness key mappings for brightnessctl.
-    // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
-    // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
-
-    Mod+O repeat=false { toggle-overview; } // Zoom 
+    Mod+W repeat=false { toggle-overview; } // Zoom 
     Shift+C repeat=false { close-window; } // Close window
     // Window switch
     Mod+H     { focus-column-left; }
@@ -256,22 +239,22 @@ binds {
     // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
 
-    Mod+Page_Down      { focus-workspace-down; }
-    Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
-    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
+    // Mod+Page_Down      { focus-workspace-down; }
+    // Mod+Page_Up        { focus-workspace-up; }
+    // Mod+U              { focus-workspace-down; }
+    // Mod+I              { focus-workspace-up; }
+    // Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+    // Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    // Mod+Ctrl+U         { move-column-to-workspace-down; }
+    // Mod+Ctrl+I         { move-column-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
     // ...
-    Mod+Shift+Page_Down { move-workspace-down; }
-    Mod+Shift+Page_Up   { move-workspace-up; }
-    Mod+Shift+U         { move-workspace-down; }
-    Mod+Shift+I         { move-workspace-up; }
+    // Mod+Shift+Page_Down { move-workspace-down; }
+    // Mod+Shift+Page_Up   { move-workspace-up; }
+    // Mod+Shift+U         { move-workspace-down; }
+    // Mod+Shift+I         { move-workspace-up; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
@@ -316,11 +299,9 @@ binds {
     Alt+1 { focus-workspace 1; }
     Alt+2 { focus-workspace 2; }
     Alt+3 { focus-workspace 3; }
-    Alt+4 { focus-workspace 4; }
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    Mod+Ctrl+3 { move-column-to-workspace 3; }
-    Mod+Ctrl+4 { move-column-to-workspace 4; }
+    Shift+1 { move-column-to-workspace 1; }
+    Shift+2 { move-column-to-workspace 2; }
+    Shift+3 { move-column-to-workspace 3; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
@@ -391,8 +372,8 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Print { screenshot; }
-    Mod+Shift+S { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Alt+Print { screenshot-screen; }
+    Mod+Shift+S { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
