@@ -1,4 +1,4 @@
-[ if -z "$DISPLAY" ]; then
+if [ -z "$DISPLAY" ]; then
   exec niri
 fi
 
