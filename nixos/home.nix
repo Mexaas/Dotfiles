@@ -22,6 +22,8 @@
     cmake
     go
 
+    pavucontrol
+    alsa-lib
     tree-sitter
     wl-clipboard
     curl
@@ -36,11 +38,16 @@
 
   programs.git = {
     enable = true;
-    userName = "Mexaas";
-    userEmail = "ruslancernaso2@gmail.com";
-
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Mexaas";
+        email = "ruslancernaso2@gmail.com";
+      };
       credential.helper = "store";
+
+      init = {
+        defaultBranch = "main";
+      };
     };
   };
 
@@ -50,6 +57,8 @@
     "waybar".source = /home/mexaa/.dotfiles/waybar;
     "nvim".source = /home/mexaa/.dotfiles/nvim;
     "fastfetch".source = /home/mexaa/.dotfiles/fastfetch;
+    "yamusic-tui".source = /home/mexaa/.dotfiles/yamusic-tui;
+    "concord".source = /home/mexaa/.dotfiles/concord;
   };
 
   home.file = {

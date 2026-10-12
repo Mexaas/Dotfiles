@@ -21,8 +21,7 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "ru_RU.UTF-8";
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
@@ -42,6 +41,8 @@
   services.pipewire = {
     enable = true;
     pulse.enable = true;
+    alsa.enable = true;
+    jack.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -60,8 +61,9 @@
   hardware.graphics.enable = true;
   hardware.nvidia = {
     modesetting.enable = true;
-  }
+  };
   programs.niri.enable = true;
+  programs.zsh.enable = true;
   
 
   # Some programs need SUID wrappers, can be configured further or are
