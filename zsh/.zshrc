@@ -1,16 +1,21 @@
-if [ -z "$DISPLAY" ]; then
-  exec niri
+if [ -z "$WAYLAND_DISPLAY" ]; then 
+  exec niri-session
 fi
 
 fastfetch
 
 # Simple aliases
-alias zshe="nvim ~/.zshrc"
-alias kittye="nvim ~/.config/kitty/kitty.conf"
-alias nirie="nvim ~/.config/niri/config.kdl"
+alias zshe="nvim ~/.dotfiles/zsh/.zshrc"
+alias kittye="nvim ~/.dotfiles/kitty/kitty.conf"
+alias nirie="nvim ~/.dotfiles/niri/config.kdl"
+alias hme="nvim ~/.config/home-manager/home.nix"
+alias hms="home-manager switch"
+alias nixe="sudo nvim /etc/nixos/configuration.nix"
+alias nixs="sudo nixos-rebuild switch"
+alias nixd="sudo nix-collect-garbage -d"
+
 alias r="reboot"
 alias pf="systemctl poweroff"
-alias mexvim="NVIM_APPNAME=mexvim nvim"
 
 # Advanced aliases
 rj() {
@@ -18,11 +23,11 @@ rj() {
 }
 
 # Path & prompt
-PROMPT='%{%F{165}%}%n%{%F{213}%}:%{%F{219}%}%~%{%f%}$ '
+PROMPT='%{%F{245}%}%n%{%F{245}%}:%{%F{250}%}%~%{%F{250}%}$ '
 
 # GO
-export GOPATH="$HOME/.local/share/go" >> ~/.zshrc
-export PATH="$GOPATH/bin:$PATH" >> ~/.zshrc
+export GOPATH="$HOME/.local/share/go"
+export PATH="$GOPATH/bin:$PATH"
 
 # RUST
 export CARGO_HOME="$HOME/.local/share/cargo"
