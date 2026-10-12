@@ -12,7 +12,7 @@ alias hme="nvim ~/.config/home-manager/home.nix"
 alias hms="home-manager switch"
 alias nixe="sudo nvim /etc/nixos/configuration.nix"
 alias nixs="sudo nixos-rebuild switch"
-alias nixd="sudo nix-collect-garbage -d"
+alias nixg="sudo nix-collect-garbage -d"
 
 alias r="reboot"
 alias pf="systemctl poweroff"
