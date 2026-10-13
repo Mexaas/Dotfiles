@@ -17,14 +17,14 @@
       nixosConfigurations.${user} = nixpkgs.lib.nixosSystem {
         system = archetype;
         modules = [
-          ./hardware-configuration.nix
-          ./configuration.nix
+          ./nixos/hardware-configuration.nix
+          ./nixos/configuration.nix
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.${user} = import ./home.nix;
+            home-manager.users.${user} = import ./nixos/home.nix;
           }
         ];
       };
