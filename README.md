@@ -1,4 +1,4 @@
-# My Dotfiles
+# 📬 My Dotfiles
 Hi, these are the configs I use daily when working on Linux.
 |Software|Path|Description
 |----------------|-------------------------------|-----------------------------|
@@ -12,9 +12,12 @@ Hi, these are the configs I use daily when working on Linux.
 |💻 [Zsh](https://zsh.org)||Shell|
 |⚙️ [NixOS](https://nixos.org/)||My NixOS setup|
 
+# 📦 Flake.nix guide
+
 > [!IMPORTANT]
 > If you use this repository as a flake to build your NixOS
 Make sure you added ` hardware-configuration.nix ` to ` .dotfiles/nixos/ `, because flake.nix builds your system into ` .dotfiles ` instead of ` /etc/nixos `
+
 - How i can do this?
 ```shell
 sudo nixos-generate-config
