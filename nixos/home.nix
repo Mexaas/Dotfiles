@@ -40,17 +40,17 @@
   };
 
   xdg.configFile = {
-    "niri".source = /home/mexaa/.dotfiles/niri;
-    "kitty".source = /home/mexaa/.dotfiles/kitty;
-    "waybar".source = /home/mexaa/.dotfiles/waybar;
-    "nvim".source = /home/mexaa/.dotfiles/nvim;
-    "fastfetch".source = /home/mexaa/.dotfiles/fastfetch;
-    "yamusic-tui".source = /home/mexaa/.dotfiles/yamusic-tui;
-    "concord".source = /home/mexaa/.dotfiles/concord;
+    "niri".source = ../niri;
+    "kitty".source = ../kitty;
+    "waybar".source = ../waybar;
+    "nvim".source = ../nvim;
+    "fastfetch".source = ../fastfetch;
+    "yamusic-tui".source = ../yamusic-tui;
+    "concord".source = ../concord;
   };
 
   home.file = {
-    ".zshrc".source = /home/mexaa/.dotfiles/zsh/.zshrc;
+    ".zshrc".source = ../zsh/.zshrc;
   };
 
   home.sessionVariables = {};
