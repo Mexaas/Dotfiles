@@ -8,7 +8,7 @@ pkgs.buildGoModule rec {
     owner = "DECE2183";
     repo = "yamusic-tui";
     rev = version;
-    hash = "sha256-WlXTCtJt5FaCQiZ1YtsgDVO4IOsfnxF09M/BWPABP+E=";
+    sha256 = "sha256-WlXTCtJt5FaCQiZ1YtsgDVO4IOsfnxF09M/BWPABP+E=";
   };
   vendorHash = "sha256-WlXTCtJt5FaCQiZ1YtsgDVO4IOsfnxF09M/BWPABP+E=";
 }
