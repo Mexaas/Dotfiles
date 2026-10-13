@@ -1,7 +1,7 @@
 # 📬 My Dotfiles
 Hi, these are the configs I use daily when working on Linux.
-|Software|Path|Description
-|----------------|-------------------------------|-----------------------------|
+|Software|Description
+|----------------|-----------------------------|
 |⚙️ [Neovim](https://github.com/Mexaas/Mexvim)||Code editor|
 |🚀 [Kitty](https://sw.kovidgoyal.net/kitty/)||Terminal|
 |🎧 [Concord](https://github.com/chojs23/concord)||Discord Tui client|
