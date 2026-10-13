@@ -10,7 +10,7 @@ alias kittye="nvim ~/.dotfiles/kitty/kitty.conf"
 alias nirie="nvim ~/.dotfiles/niri/config.kdl"
 alias hme="nvim ~/.dotfiles/nixos/home.nix"
 alias nixe="sudo nvim ~/.dotfiles/nixos/configuration.nix"
-alias nixs="sudo nixos-rebuild switch --flake .#mexaa"
+alias nixs="sudo nixos-rebuild switch --flake ~/.dotfiles#mexaa"
 alias nixg="sudo nix-collect-garbage -d"
 
 alias r="reboot"
