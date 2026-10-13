@@ -4,7 +4,7 @@ pkgs.buildGoModule rec {
   pname = "yamusic-tui";
   version = "main";
 
-  src = pkgs.fetchFromGithub {
+  src = pkgs.fetchFromGitHub {
     owner = "DECE2183";
     repo = "yamusic-tui";
     rev = version;
