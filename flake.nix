@@ -15,7 +15,7 @@
       pkgs = nixpkgs.legacyPackages.${archetype};
       user = "mexaa";
     in {
-      packages.${archetype}.yamusic-tui = pkgs.callPackage ./nixos/packages/yamusic.nix {};
+      packages.${archetype}.yamusic-tui = pkgs.callPackage ./packages/yamusic.nix {};
       
       nixosConfigurations.${user} = nixpkgs.lib.nixosSystem {
         system = archetype;
