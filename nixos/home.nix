@@ -1,11 +1,11 @@
 { config, pkgs, ... }:
-
 {
   home.username = "mexaa";
   home.homeDirectory = "/home/mexaa";
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
+    (import ./packages/yamusic.nix { inherit pkgs; })
     firefox
     neovim
     niri
@@ -22,6 +22,22 @@
     noto-fonts-color-emoji
     grim 
     slurp
+
+    gcc
+    gnumake
+    clang
+    cmake
+    rustup
+    go
+    llvm
+    pkg-config
+    git
+    curl
+    unzip
+    alsa-lib
+    pavucontrol
+    pipewire
+    zsh
   ];
 
   programs.git = {
