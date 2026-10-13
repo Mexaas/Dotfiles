@@ -10,9 +10,10 @@ Hi, these are the configs I use daily when working on Linux.
 |🔎 [Waybar](https://waybar.org/)|Bar configuration|
 |📬 [Fastfetch](https://github.com/fastfetch-cli/fastfetch)|Fastfetch|
 |💻 [Zsh](https://zsh.org)|Shell|
-|⚙️ [NixOS](https://nixos.org/)|My NixOS setup|
+|⚙️ [NixOS](https://nixos.org/)|NixOS Setup Environment|
+|⚙️ [Arch Linux](https://archlinux.org/)|Arch Setup Environment|
 
-# 📦 Flake.nix guide
+# 📦 NixOS > Flake.nix install guide
 
 > [!IMPORTANT]
 > If you use this repository as a flake to build your NixOS
@@ -28,3 +29,6 @@ sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/nixos/hardware-configu
 ```shell
 sudo nixos-rebuild switch --flake ~/.dotfiles#flake_config_user
 ```
+# 📦 Arch Linux > Bash install guide
+> [!NOTE]
+> **Work in Progress (WIP).**
