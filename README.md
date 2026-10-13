@@ -13,7 +13,7 @@ Hi, these are the configs I use daily when working on Linux.
 |⚙️ [NixOS](https://nixos.org/)|NixOS Setup Environment|
 |⚙️ [Arch Linux](https://archlinux.org/)|Arch Setup Environment|
 
-# 📦 NixOS > Flake.nix install guide
+# 📦 NixOS - Flake.nix install guide
 
 > [!IMPORTANT]
 > If you use this repository as a flake to build your NixOS
@@ -29,6 +29,6 @@ sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/nixos/hardware-configu
 ```shell
 sudo nixos-rebuild switch --flake ~/.dotfiles#flake_config_user
 ```
-# 📦 Arch Linux > Bash install guide
+# 📦 Arch Linux - Bash install guide
 > [!NOTE]
 > **Work in Progress (WIP).**
