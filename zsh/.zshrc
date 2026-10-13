@@ -8,10 +8,9 @@ fastfetch
 alias zshe="nvim ~/.dotfiles/zsh/.zshrc"
 alias kittye="nvim ~/.dotfiles/kitty/kitty.conf"
 alias nirie="nvim ~/.dotfiles/niri/config.kdl"
-alias hme="nvim ~/.config/home-manager/home.nix"
-alias hms="home-manager switch"
-alias nixe="sudo nvim /etc/nixos/configuration.nix"
-alias nixs="sudo nixos-rebuild switch"
+alias hme="nvim ~/.dotfiles/nixos/home.nix"
+alias nixe="sudo nvim ~/.dotfiles/nixos/configuration.nix"
+alias nixs="sudo nixos-rebuild switch --flake .#mexaa"
 alias nixg="sudo nix-collect-garbage -d"
 
 alias r="reboot"
