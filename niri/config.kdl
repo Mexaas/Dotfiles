@@ -8,7 +8,7 @@ input { // Input settings
         repeat-rate 40 // Write 40 symbols per second
     }
     touchpad { // Notebook touchpad
-        off // comment this to enable
+        // off
         tap // enable finger tap
     }   
     mouse { // Mouse settings
@@ -23,6 +23,12 @@ output "HDMI-A-1" { // Monitor output. Type "niri msg outputs" to check
     scale 1.0 // Workspace scale
     transform "normal" // Normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270
     position x=0 y=0 // Virtual space of your monitors. Necessary if you have 2+ monitors
+}
+/-output "eDP-1" {
+  mode "2560x1600@144.000"
+  scale 1.7
+  transform "normal"
+  position x=0 y=0
 }
 
 layout {
@@ -108,8 +114,7 @@ binds {
     Shift+Mod+S { spawn-sh "grim -g \"$(slurp)\" - | wl-copy"; }
     // Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    // brightnessctl for notebooks
-    // XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    // XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; } // Brightness +
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; } // Brightness -
     Mod+Q { quit; } // Niri shutdown
 }
