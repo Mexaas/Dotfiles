@@ -12,11 +12,8 @@
   outputs = { nixpkgs, home-manager, ... }@inputs:
     let
       archetype = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${archetype};
       user = "mexaa";
     in {
-      packages.${archetype}.yamusic-tui = pkgs.callPackage ./nixos/packages/yamusic.nix {};
-      
       nixosConfigurations.${user} = nixpkgs.lib.nixosSystem {
         system = archetype;
         modules = [
