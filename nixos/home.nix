@@ -7,27 +7,15 @@
 
   home.packages = with pkgs; [
     firefox
-    git
-    zsh
     neovim
     niri
     kitty
     fastfetch
     waybar
     telegram-desktop
-    
-    gcc
-    gnumake
-    pkg-config
-    cmake
-    go
 
-    pavucontrol
-    alsa-lib
     tree-sitter
     wl-clipboard
-    curl
-    unzip
     nerd-fonts.ubuntu-mono
     font-awesome
     noto-fonts

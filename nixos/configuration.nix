@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
     ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   boot.loader.systemd-boot.enable = false;
   boot.loader.grub.enable = true;
@@ -55,7 +56,23 @@
     ];
     shell = pkgs.zsh;
   };
-  environment.systemPackages = with pkgs; [];
+  environment.systemPackages = with pkgs; [
+    gcc
+    gnumake
+    clang
+    llvm
+    pkg-config
+    cmake
+    rustup
+    go
+    git
+    curl
+    unzip
+    alsa-lib
+    pavucontrol
+    pipewire
+    zsh
+  ];
 
   nixpkgs.config.allowUnfree = true;
   hardware.graphics.enable = true;
