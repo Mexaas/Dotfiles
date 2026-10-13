@@ -33,24 +33,7 @@
     ];
     shell = pkgs.zsh;
   };
-  environment.systemPackages = with pkgs; [
-    gcc
-    gnumake
-    clang
-    cmake
-    rustup
-    go
-    llvm
-
-    pkg-config
-    git
-    curl
-    unzip
-    alsa-lib
-    pavucontrol
-    pipewire
-    zsh
-  ];
+  environment.systemPackages = with pkgs; [];
 
   nixpkgs.config.allowUnfree = true;
   hardware.graphics.enable = true;
