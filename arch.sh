@@ -4,11 +4,18 @@ GREEN='\033[0;32m'
 HOSTNAME="mexaa"
 USERNAME="mexaa"
 PASSWORD="234"
+ROOTPASSWORD="234"
 
 set -e
 PACKAGES=(
     "linux"
     "linux-firmware"
+    "base-devel"
+    "gcc"
+    "clang"
+    "cmake"
+    "pkg-config"
+    "mpv"
     "networkmanager"
     "niri" 
     "xdg-desktop-portal-gnome"
@@ -61,7 +68,7 @@ echo "LANG=ru_RU.UTF-8" > /etc/locale.conf
 echo "$HOSTNAME" > /etc/hostname
 useradd -m -G wheel -s /bin/zsh "$USERNAME"
 echo "$USERNAME:$PASSWORD" | chpasswd
-echo "root:$PASSWORD" | chpasswd
+echo "root:$ROOTPASSWORD" | chpasswd
 sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
 systemctl enable NetworkManager
