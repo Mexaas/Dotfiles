@@ -37,6 +37,8 @@ PACKAGES=(
     "git"
     "tree-sitter-cli" 
     "wl-clipboard"
+    "grim"
+    "slurp"
     "noto-fonts"
     "noto-fonts-emoji"
     "ttf-ubuntu-mono-nerd"
