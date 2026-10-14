@@ -1,5 +1,5 @@
 # 📬 My Dotfiles
-Hi, these are the configs I use daily when working on Linux.
+This is a repository of what I use daily. Installation is available for both ` NixOS ` and ` Arch Linux `. All scripts are open-source for custom editing
 |Software|Description|
 |----------------|-----------------------------|
 |⚙️ [Neovim](https://github.com/Mexaas/Mexvim)|Code editor|
@@ -10,25 +10,8 @@ Hi, these are the configs I use daily when working on Linux.
 |🔎 [Waybar](https://waybar.org/)|Bar configuration|
 |📬 [Fastfetch](https://github.com/fastfetch-cli/fastfetch)|Fastfetch|
 |💻 [Zsh](https://zsh.org)|Shell|
-|⚙️ [NixOS](https://nixos.org/)|NixOS Setup Environment|
-|⚙️ [Arch Linux](https://archlinux.org/)|Arch Setup Environment|
-
-# 📦 NixOS - Flake.nix install guide
-
-> [!IMPORTANT]
-> If you use this repository as a flake to build your NixOS
-Make sure you added ` hardware-configuration.nix ` to ` .dotfiles/nixos/ `, because flake.nix builds your system into ` .dotfiles ` instead of ` /etc/nixos `
-
-- How i can do this?
-```shell
-sudo nixos-generate-config
-```
-```shell
-sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/nixos/hardware-configuration.nix
-```
-```shell
-sudo nixos-rebuild switch --flake ~/.dotfiles#flake_config_user
-```
+|💼 [NixOS](https://nixos.org/)|NixOS Setup Environment|
+|🧑🏻‍💻 [Arch Linux](https://archlinux.org/)|Arch Setup Environment|
 
 # 📦 NixOS - Flake install guide
 > [!IMPORTANT]
@@ -58,11 +41,11 @@ After completing all the steps, your folder should contain general files
     ├── hardware-configuration.nix
     └── home.nix
 ```
-- Make sure you have edited the ` flake.nix `, don't forget to change the user variable. In addition, you can change the working environment and the required packages in ` /nixos/home.nix `, and system settings in ` /nixos/configuration.nix `
-You can now start assembling the system. Make sure you have run ` git add . `. Flake.nix only sees staged files
+Make sure you have edited the ` flake.nix `, don't forget to change the user variable. In addition, you can change the working environment and the required packages in ` /nixos/home.nix `, and system settings in ` /nixos/configuration.nix `. You can now start assembling the system. Make sure you have run ` git add . `. Flake.nix only sees staged files
 ```shell
 sudo nixos-rebuild switch --flake ~/Dotfiles#flake-username
 ```
+
 
 # 📦 Arch Linux - Bash install guide
 > [!IMPORTANT]
