@@ -10,8 +10,6 @@ This is a repository of what I use daily. Installation is available for both ` N
 |🔎 [Waybar](https://waybar.org/)|Bar configuration|
 |📬 [Fastfetch](https://github.com/fastfetch-cli/fastfetch)|Fastfetch|
 |💻 [Zsh](https://zsh.org)|Shell|
-|💼 [NixOS](https://nixos.org/)|NixOS Setup Environment|
-|🧑🏻‍💻 [Arch Linux](https://archlinux.org/)|Arch Setup Environment|
 
 # 📦 NixOS - Flake install guide
 > [!IMPORTANT]
