@@ -34,6 +34,8 @@ PACKAGES=(
     "firefox" 
     "waybar" 
     "fastfetch"
+    "awww"
+    "swaync"
     "git"
     "tree-sitter-cli" 
     "wl-clipboard"
@@ -47,7 +49,6 @@ PACKAGES=(
     "grub"
     "efibootmgr"
     "os-prober"
-
     #AMD
     #"mesa" 
     #"amd-ucode"
