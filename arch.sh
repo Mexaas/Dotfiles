@@ -82,4 +82,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 echo -e "-----------> Build completed, pc will be reboot soon"
 sleep 3
+exit
+umount -R /mnt
 reboot
