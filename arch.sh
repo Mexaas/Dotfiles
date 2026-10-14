@@ -29,6 +29,7 @@ PACKAGES=(
     "pavucontrol"
     "zsh" 
     "neovim"
+    "telegram-desktop"
     "kitty"
     "firefox" 
     "waybar" 
