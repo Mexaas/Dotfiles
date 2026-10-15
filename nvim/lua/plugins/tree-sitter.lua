@@ -4,7 +4,7 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter").install({
-        "java"
+        "rust", "bash", "lua", "kdl", "json"
       })
 
       vim.api.nvim_create_autocmd('FileType', {
@@ -14,24 +14,4 @@ return {
       })
     end
   },
-  
-  {
-    "williamboman/mason.nvim",
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
-    },
-    config = function()
-      require("mason").setup()
-      require("mason-lspconfig").setup({
-        ensure_installed = { "jdtls" }
-      })
-      local servers = { "jdtls" }
-
-      for _, key in ipairs(servers) do
-        vim.lsp.config(key, {})
-        vim.lsp.enable(key)
-      end
-    end
-  }
 }

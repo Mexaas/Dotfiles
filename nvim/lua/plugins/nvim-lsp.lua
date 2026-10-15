@@ -8,9 +8,9 @@ return {
     config = function()
       require("mason").setup()
       require("mason-lspconfig").setup({
-        ensure_installed = { "jdtls" }
+        ensure_installed = { "rust_analyzer", "bashls" }
       })
-      local servers = { "jdtls" }
+      local servers = { "rust_analyzer", "bashls" }
 
       for _, key in ipairs(servers) do
         vim.lsp.config(key, {})
