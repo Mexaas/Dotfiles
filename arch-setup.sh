@@ -7,23 +7,23 @@ CONFIG_PATH="$HOME/.config"
 DOTFILES_PATH="$HOME/.dotfiles"
 
 declare -A CFG_DIRECTIONS=(
-  ["nvim"]="1"
-  ["kitty"]="1"
-  ["niri"]="1"
-  ["fastfetch"]="1"
-  ["waybar"]="1"
-  ["yamusic-tui"]="1"
-  ["concord"]="1"
-  ["user-dirs"]="0"
+  ["nvim"]="folder"
+  ["kitty"]="folder"
+  ["niri"]="folder"
+  ["fastfetch"]="folder"
+  ["waybar"]="folder"
+  ["yamusic-tui"]="folder"
+  ["concord"]="folder"
+  ["user-dirs.dirs"]="file"
 )
 
 echo -e "${GREEN} Starting system setup... | https://github.com/Mexaas/Dotfiles"
 for key in "${!CFG_DIRECTIONS[@]}"; do
-  if [ "${CFG_DIRECTIONS[$key]}" = "1" ]; then
-    mkdir -p "$DOTFILES_PATH/$key"
+  if [ "${CFG_DIRECTIONS[$key]}" = "folder" ]; then
+    mkdir -p "$CONFIG_PATH/$key"
   else
-    if [ "$key" = "user-dirs" ]; then
-      cat << 'EOF' > "$CONFIG_PATH/user-dirs.dirs"
+    if [ "${CFG_DIRECTIONS[$key]}" = "file" ]; then
+      cat << 'EOF' > "$CONFIG_PATH/$key"
 XDG_DESKTOP_DIR="$HOME"
 XDG_DOWNLOAD_DIR="$HOME/downloads"
 XDG_TEMPLATES_DIR="$HOME"
@@ -35,5 +35,11 @@ XDG_VIDEOS_DIR="$HOME"
 XDG_PROJECTS_DIR="$HOME/projects"
 EOF
     fi
+  fi
+done
+
+for value in "${!CFG_DIRECTIONS[@]}"; do
+  if [ "${CFG_DIRECTIONS[$value]}" = "folder" ]; then
+    ln -sf "$DOTFILES_PATH/$value" "$CONFIG_PATH/$value"
   fi
 done
