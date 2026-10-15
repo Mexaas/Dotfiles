@@ -65,7 +65,7 @@ spawn-at-startup "waybar" // Open waybar at startup
 spawn-at-startup "swaync" // Open notification center at startup
 spawn-at-startup "awww-daemon" // Open desktop wallpaper daemon at startup
 // spawn-at-startup "nvibrant 0 0 0 0 612" -> NVIDIA VIBRANT
-spawn-sh-at-startup "awww img ~/.config/wallhaven.png" // Set wallpaper.png to daemon
+spawn-sh-at-startup "awww img ~/.dotfiles/wallpaper.png" // Set wallpaper.png to daemon
 
 hotkey-overlay {
     skip-at-startup // switch off hotkey tips after startup
