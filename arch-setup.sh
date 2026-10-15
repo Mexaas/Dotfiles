@@ -5,7 +5,6 @@ set -e
 
 CONFIG_PATH="$HOME/.config"
 DOTFILES_PATH="$HOME/Dotfiles"
-WALLPAPER_NAME="wallpaper.jpg"
 
 declare -A CFG_DIRECTIONS=(
   ["nvim"]="folder"
@@ -42,8 +41,5 @@ for value in "${!CFG_DIRECTIONS[@]}"; do
     ln -sf "$DOTFILES_PATH/$value" "$CONFIG_PATH/$value"
   fi
 done
-
-awww-daemon
-awww img "$DOTFILES_PATH/$WALLPAPER_NAME"
 
 echo -e "${GREEN} Done"
