@@ -20,7 +20,7 @@ declare -A CFG_DIRECTIONS=(
 echo -e "${GREEN} Starting system setup... | https://github.com/Mexaas/Dotfiles"
 for key in "${!CFG_DIRECTIONS[@]}"; do
   if [ "${CFG_DIRECTIONS[$key]}" = "folder" ]; then
-    mkdir -p "$CONFIG_PATH/$key"
+    mkdir -p "$CONFIG_PATH"
   else
     if [ "${CFG_DIRECTIONS[$key]}" = "file" ]; then
       cat << 'EOF' > "$CONFIG_PATH/$key"
@@ -43,3 +43,6 @@ for value in "${!CFG_DIRECTIONS[@]}"; do
     ln -sf "$DOTFILES_PATH/$value" "$CONFIG_PATH/$value"
   fi
 done
+
+sleep 1
+echo -e "${GREEN} Done, ~/.config/files & ~/.dotfiles -> Created | https://github.com/Mexaas/Dotfiles"
