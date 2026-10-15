@@ -45,6 +45,7 @@ PACKAGES=(
     "noto-fonts-emoji"
     "ttf-ubuntu-mono-nerd"
     "go"
+    "npm"
     "rustup"
     "grub"
     "efibootmgr"
