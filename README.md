@@ -60,3 +60,14 @@ Run installer file
 ```shell
 cd ~/Dotfiles && ./arch-install.sh
 ```
+After successful download, exit from Live-USB
+```shell
+exit
+umount -R /mnt
+reboot
+```
+Login to TTY session and create symlinks and config paths
+```shell
+cd ~/Dotfiles && ./arch-setup.sh
+```
+You can change ` arch-setup.sh ` for your priorities
