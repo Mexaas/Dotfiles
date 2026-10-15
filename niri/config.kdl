@@ -17,7 +17,7 @@ input { // Input settings
         accel-profile "flat" // Mouse profile
     }
 }
-output "HDMI-A-1" { // Monitor output. Type "niri msg outputs" to check
+/-output "HDMI-A-1" { // Monitor output. Type "niri msg outputs" to check
     // off
     mode "1920x1080@143.998" // Monitor resolution
     scale 1.0 // Workspace scale
@@ -63,7 +63,6 @@ layout {
 }
 spawn-at-startup "waybar" // Open waybar at startup
 spawn-at-startup "swaync" // Open notification center at startup
-spawn-sh-at-startup "nvibrant 0 0 0 0 612" // Digital intensity
 spawn-at-startup "awww-daemon" // Open desktop wallpaper daemon at startup
 spawn-sh-at-startup "awww img ~/.config/wallhaven.png" // Set wallpaper.png to daemon
 
