@@ -15,7 +15,6 @@ PACKAGES=(
     "clang"
     "cmake"
     "pkg-config"
-    "mpv"
     "networkmanager"
     "niri" 
     "xdg-desktop-portal-gnome"
@@ -69,6 +68,7 @@ sudo pacman -S --needed "${PACKAGES[@]}"
 ln -sf /usr/share/zoneinfo/Asia/Almaty /etc/localtime
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 sed -i 's/#ru_RU.UTF-8 UTF-8/ru_RU.UTF-8 UTF-8/' /etc/locale.gen
+locale-gen
 echo "LANG=ru_RU.UTF-8" > /etc/locale.conf
 echo "$HOSTNAME" > /etc/hostname
 useradd -m -G wheel -s /bin/zsh "$USERNAME"
