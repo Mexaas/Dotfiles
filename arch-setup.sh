@@ -13,7 +13,6 @@ declare -A CFG_DIRECTIONS=(
   ["fastfetch"]="folder"
   ["waybar"]="folder"
   ["yamusic-tui"]="folder"
-  ["concord"]="folder"
   ["user-dirs.dirs"]="file"
 )
 
@@ -41,5 +40,18 @@ for value in "${!CFG_DIRECTIONS[@]}"; do
     ln -sf "$DOTFILES_PATH/$value" "$CONFIG_PATH/$value"
   fi
 done
+
+#cd ~/ && git clone https://aur.archlinux.org/yay.git
+#cd yay && makepkg -si --noconfirm
+#cd ~/ && rm -rf yay
+#yay -S --needed --noconfirm vesktop nvibrant
+cat << 'EOF' > "$HOME/.gitconfig"
+[credential]
+	helper = store
+[user]
+	name = none
+	email = none
+EOF
+
 
 echo -e "${GREEN} Done"
