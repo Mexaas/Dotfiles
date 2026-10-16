@@ -17,7 +17,7 @@ input { // Input settings
         accel-profile "flat" // Mouse profile
     }
 }
-/-output "HDMI-A-1" { // Monitor output. Type "niri msg outputs" to check
+output "HDMI-A-1" { // Monitor output. Type "niri msg outputs" to check
     // off
     mode "1920x1080@143.998" // Monitor resolution
     scale 1.0 // Workspace scale
@@ -85,7 +85,7 @@ window-rule {
 binds {
     Ctrl+Grave { spawn "kitty"; } // Open terminal
     Ctrl+4 { spawn-sh "kitty yamusic-tui"; } // Open yandex music terminal
-    Ctrl+3 { spawn-sh "kitty concord"; } // Open discord terminal
+    Ctrl+3 { spawn-sh "vesktop"; } // Open discord terminal
     Ctrl+2 { spawn "Telegram"; } // Open telegram
     Ctrl+1 { spawn "firefox"; } // Open firefox browser
     Ctrl+Alt+Space    allow-when-locked=true { spawn-sh "playerctl play-pause"; } // Music Play-Pause
