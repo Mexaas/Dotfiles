@@ -9,6 +9,8 @@ alias zshe="nvim ~/.dotfiles/zsh/.zshrc"
 alias kittye="nvim ~/.dotfiles/kitty/kitty.conf"
 alias nirie="nvim ~/.dotfiles/niri/config.kdl"
 
+alias cb="cargo build"
+alias cr="cargo run"
 alias r="reboot"
 alias pf="systemctl poweroff"
 
