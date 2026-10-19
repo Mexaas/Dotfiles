@@ -4,7 +4,7 @@ GREEN='\033[0;32m'
 set -e
 
 CONFIG_PATH="$HOME/.config"
-DOTFILES_PATH="$HOME/.dotfiles"
+DOTFILES_PATH="$HOME/Dotfiles"
 
 # folder -> ~/.config/*
 # home   -> ~/*
@@ -41,5 +41,7 @@ done
 #cd ~/ && git clone https://aur.archlinux.org/yay.git
 #cd yay && makepkg -si --noconfirm
 #cd ~/ && rm -rf yay
-#yay -S --needed --noconfirm vesktop nvibrant
+#yay -S --needed --noconfirm vesktop
+#go install github.com/dece2183/yamusic-tui@latest
+
 echo -e "${GREEN} Done"
