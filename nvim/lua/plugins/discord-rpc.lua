@@ -5,7 +5,7 @@ return {
     event = "VeryLazy",
     config = function() require("cord").setup({
       display = {
-        theme = "catppuccin",
+        theme = "void",
         flavor = "dark",
         view =  "asset"
       },
