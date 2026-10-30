@@ -24,7 +24,7 @@ output "HDMI-A-1" { // Monitor output. Type "niri msg outputs" to check
     transform "normal" // Normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270
     position x=0 y=0 // Virtual space of your monitors. Necessary if you have 2+ monitors
 }
-/-output "eDP-1" {
+output "eDP-1" {
   mode "2560x1600@144.000"
   scale 1.7
   transform "normal"
@@ -61,7 +61,7 @@ layout {
         color "#0007" // Default shadow color
     }
 }
-spawn-sh-at-startup "nvibrant 0 0 0 0 612"
+//spawn-sh-at-startup "nvibrant 0 0 0 0 612"
 spawn-at-startup "waybar" // Open waybar at startup
 spawn-at-startup "swaync" // Open notification center at startup
 spawn-at-startup "awww-daemon" // Open desktop wallpaper daemon at startup
